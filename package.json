@@ -33,6 +33,6 @@
     "node": ">=0.10"
   },
   "scripts": {
-  "start": "./kiwi start"
+  "start": "./kiwi build && ./kiwi start"
   }
 }
