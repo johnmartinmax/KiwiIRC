@@ -17,13 +17,11 @@ conf.log = "kiwi.log";
 // Do not edit this line!
 conf.servers = [];
 
-var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
-var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'
 
 // Example server block
 conf.servers.push({
-    port:   server_port,
-    address: server_ip_address
+    port:   8080,
+    address: "0.0.0.0"
 });
 
 // Example SSL server block
