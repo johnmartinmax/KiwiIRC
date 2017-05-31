@@ -6,7 +6,7 @@
   "license": "AGPL-3.0",
   "preferGlobal": "true",
   "scripts": {
-  "start": "./kiwi build ; ./kiwi start"
+  "start": "./kiwi start"
   },
   "bin": {
     "kiwiirc": "./kiwi"
