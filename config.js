@@ -2,6 +2,10 @@ var conf = {};
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
+server.listen(server_port, server_ip_address, function () {
+  console.log( "Listening on " + server_ip_address + ", port " + server_port )
+});
+
 // Run the Kiwi server under a different user/group
 conf.user = "";
 conf.group = "";
