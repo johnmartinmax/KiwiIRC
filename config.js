@@ -17,11 +17,13 @@ conf.log = "kiwi.log";
 // Do not edit this line!
 conf.servers = [];
 
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 
 // Example server block
 conf.servers.push({
-    port:   8080,
-    address: "0.0.0.0"
+    port:   server_port,
+    address: server_ip_address
 });
 
 // Example SSL server block
@@ -36,7 +38,7 @@ conf.servers.push({
 
 // Network interface for outgoing connections
 conf.outgoing_address = {
-    IPv4: '0.0.0.0'
+    IPv4: server_ip_address
     //IPv6: '::'
 };
 
@@ -45,7 +47,7 @@ conf.outgoing_address = {
 conf.identd = {
     enabled: false,
     port: 113,
-    address: "0.0.0.0"
+    address: server_ip_address
 };
 
 
