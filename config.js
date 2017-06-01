@@ -1,10 +1,4 @@
 var conf = {};
-var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
-    ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
-
-server.listen(port, ip, function () {
-  console.log( "Listening on " + ip + ", port " + port )
-});
 
 // Run the Kiwi server under a different user/group
 conf.user = "";
@@ -25,8 +19,8 @@ conf.servers = [];
 
 // Example server block
 conf.servers.push({
-    port:   port,
-    address: ip
+    port:   8080,
+    address: "0.0.0.0"
 });
 
 // Example SSL server block
@@ -41,7 +35,7 @@ conf.servers.push({
 
 // Network interface for outgoing connections
 conf.outgoing_address = {
-    IPv4: ip
+    IPv4: '0.0.0.0'
     //IPv6: '::'
 };
 
@@ -50,7 +44,7 @@ conf.outgoing_address = {
 conf.identd = {
     enabled: false,
     port: 113,
-    address: ip
+    address: "0.0.0.0"
 };
 
 
