@@ -263,7 +263,7 @@ IrcConnection.prototype.connect = function () {
                 port: that.socks.port,
                 user: that.socks.user,
                 pass: that.socks.pass,
-                localAddress: outgoing
+                //localAddress: outgoing
             });
 
         } else if (that.proxy) {
@@ -286,7 +286,7 @@ IrcConnection.prototype.connect = function () {
                     host: host,
                     port: that.irc_host.port,
                     rejectUnauthorized: global.config.reject_unauthorised_certificates,
-                    localAddress: outgoing
+                    //localAddress: outgoing
                 });
 
                 // We need the raw socket connect event.
@@ -301,7 +301,7 @@ IrcConnection.prototype.connect = function () {
                 that.socket = net.connect({
                     host: host,
                     port: that.irc_host.port,
-                    localAddress: outgoing
+                    //localAddress: outgoing
                 });
             }
         }
