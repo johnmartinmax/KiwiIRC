@@ -19,8 +19,8 @@ conf.servers = [];
 
 // Example server block
 conf.servers.push({
-    port:   8080,
-    address: "127.0.0.1"
+    port:   7778,
+    address: "0.0.0.0"
 });
 
 // Example SSL server block
@@ -35,7 +35,7 @@ conf.servers.push({
 
 // Network interface for outgoing connections
 conf.outgoing_address = {
-    IPv4: '127.0.0.1'
+    IPv4: '0.0.0.0'
     //IPv6: '::'
 };
 
@@ -44,7 +44,7 @@ conf.outgoing_address = {
 conf.identd = {
     enabled: false,
     port: 113,
-    address: "127.0.0.1"
+    address: "0.0.0.0"
 };
 
 
