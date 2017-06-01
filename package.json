@@ -5,6 +5,7 @@
   "homepage": "https://www.kiwiirc.com/",
   "license": "AGPL-3.0",
   "preferGlobal": "true",
+  "scripts": { "start" : "./kiwi start" } },
   "bin": {
     "kiwiirc": "./kiwi"
   },
