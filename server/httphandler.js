@@ -49,13 +49,7 @@ HttpHandler.prototype.serve = function (request, response) {
     if (base_check.indexOf(base_path + '/') === 0) {
         request.url = request.url.replace(base_path, '');
 
-    } else if (base_check !== '/') {
-        // We don't handle requests outside of the base path and not /, so just 404
-        response.writeHead(404);
-        response.write('Not Found');
-        response.end();
-        return;
-    }
+    } 
 
     // Map any whitelisted folders to the local directories
     whitelisted_folders.forEach(function(folder) {
