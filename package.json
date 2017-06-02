@@ -5,6 +5,10 @@
   "homepage": "https://www.kiwiirc.com/",
   "license": "AGPL-3.0",
   "preferGlobal": "true",
+  "scripts": {
+  "start": "node server.js"
+  },
+  "main": "server.js",
   "bin": {
     "kiwiirc": "./kiwi"
   },
