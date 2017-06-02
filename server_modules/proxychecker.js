@@ -35,7 +35,7 @@ module.on('irc connecting', function (event, event_data) {
 function checkForOpenProxies(host, callback) {
     var net = require('net');
 
-    var ports = [80,8080,81,1080,6588,8000];
+    var ports = [80,81,1080,6588,8000];
     var ports_completed = 0;
 
     var callback_called = false;
